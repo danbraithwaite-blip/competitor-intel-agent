@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competitive Intelligence Briefing — Sep 21, 2026</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --high: #ef4444;
+      --medium: #f59e0b;
+      --low: #10b981;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 8px 0;
+      color: #fff;
+    }
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-high { background: rgba(239, 68, 68, 0.2); color: var(--high); border: 1px solid var(--high); }
+    .badge-medium { background: rgba(245, 158, 11, 0.2); color: var(--medium); border: 1px solid var(--medium); }
+    .badge-low { background: rgba(16, 185, 129, 0.2); color: var(--low); border: 1px solid var(--low); }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      margin: 40px 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .intel-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 0;
+      color: #fff;
+    }
+    .competitor-tag {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .field {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+    .field-label {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .counter-strategy {
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 3px solid var(--accent);
+      padding: 10px 14px;
+      margin-top: 12px;
+      border-radius: 0 4px 4px 0;
+    }
+    .empty-state {
+      background: var(--card-bg);
+      border: 1px dashed var(--card-border);
+      padding: 24px;
+      text-align: center;
+      color: var(--text-muted);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Competitive Intelligence Briefing — Sep 21, 2026</h1>
+      <div class="meta">Generated: 2026-09-21 22:02:01 | Analysis Model: Gemini Intelligence Engine</div>
+    </header>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">20</div>
+        <div class="stat-label">Total Events Analyzed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">0</div>
+        <div class="stat-label">Pricing Movements</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">20</div>
+        <div class="stat-label">Product Releases</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">0</div>
+        <div class="stat-label">High Threat Signals</div>
+      </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <h2 class="section-title">Pricing & Packaging Movements</h2>
+    
+      <div class="empty-state">No pricing or packaging changes detected in this reporting period.</div>
+    
+
+    <!-- Product Releases Section -->
+    <h2 class="section-title">Product Releases & Changelogs</h2>
+    
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">RESEND</span>
+            <h3 class="card-title">Welcoming Phil Nash, our new Developer Experience Engineer</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">RESEND</span>
+            <h3 class="card-title">How to Show Your Logo in Apple Mail</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">RESEND</span>
+            <h3 class="card-title">Welcoming Mateus Resende, our new Software Engineer</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">RESEND</span>
+            <h3 class="card-title">Welcoming Fabio Kubo, our new Software Engineer</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">RESEND</span>
+            <h3 class="card-title">Welcoming Laura Beatris, our new Software Engineer</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">RESEND</span>
+            <h3 class="card-title">How APRF Helps You Understand Your Email Reputation</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">RESEND</span>
+            <h3 class="card-title">The Email Verification API</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">RESEND</span>
+            <h3 class="card-title">Welcoming Kiersti Esparza, our new Deliverability Engineer</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">RESEND</span>
+            <h3 class="card-title">Welcoming Julia Zettel, our new Video Producer</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">RESEND</span>
+            <h3 class="card-title">Welcoming Roberto Braga, our new Growth Marketer</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">SUPABASE</span>
+            <h3 class="card-title">Supabase Pipelines is now in Public Alpha</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">SUPABASE</span>
+            <h3 class="card-title">Observability for every Supabase project with Grafana Cloud</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">SUPABASE</span>
+            <h3 class="card-title">Sign in with ChatGPT is in beta on Supabase</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">SUPABASE</span>
+            <h3 class="card-title">Introducing Supabase Evals</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">SUPABASE</span>
+            <h3 class="card-title">Are Supabase docs agent-friendly? We didn't know, so we checked</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">SUPABASE</span>
+            <h3 class="card-title">Postgres Changes gets AND filters, new operators, and column selection</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">SUPABASE</span>
+            <h3 class="card-title">Supabase is now a connector on Perplexity Computer</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">SUPABASE</span>
+            <h3 class="card-title">Connect client traces to your logs</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">SUPABASE</span>
+            <h3 class="card-title">Enterprise-managed auth for the Supabase MCP server</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+      <div class="intel-card">
+        <div class="card-header">
+          <div>
+            <span class="competitor-tag">SUPABASE</span>
+            <h3 class="card-title">Supabase is now available in Gemini Enterprise</h3>
+          </div>
+          <span class="badge badge-medium">MEDIUM THREAT</span>
+        </div>
+        <div class="field">
+          <span class="field-label">Release Category</span>
+          Major Feature Release
+        </div>
+        <div class="field">
+          <span class="field-label">Capability Overview</span>
+          New product feature or capability announced in changelog/release notes.
+        </div>
+        <div class="field">
+          <span class="field-label">Competitive Implication</span>
+          Competitor continues active iteration to enhance workflow efficiency and user retention.
+        </div>
+        <div class="counter-strategy">
+          <span class="field-label" style="color: var(--accent);">Recommended Action</span>
+          Evaluate user feedback on this feature to assess customer demand and adjust quarterly roadmap prioritization.
+        </div>
+      </div>
+      
+    
+  </div>
+</body>
+</html>

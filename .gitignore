@@ -1,0 +1,29 @@
+# Environment & Secrets
+.env
+*.env
+
+# Python Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Databases
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# macOS Artifacts
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log

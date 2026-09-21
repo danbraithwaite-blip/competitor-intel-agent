@@ -1,0 +1,36 @@
+# Competitors Configuration File
+# Define competitors to monitor, along with their pricing pages and changelogs.
+
+competitors:
+  - id: "linear"
+    name: "Linear"
+    website: "https://linear.app"
+    description: "Issue tracking and project management tool"
+    pricing:
+      url: "https://linear.app/pricing"
+      selector: "main"
+    changelog:
+      type: "web_page"
+      url: "https://linear.app/changelog"
+
+  - id: "supabase"
+    name: "Supabase"
+    website: "https://supabase.com"
+    description: "Open source Firebase alternative"
+    pricing:
+      url: "https://supabase.com/pricing"
+      selector: "main"
+    changelog:
+      type: "feed"
+      url: "https://supabase.com/rss.xml"
+
+  - id: "resend"
+    name: "Resend"
+    website: "https://resend.com"
+    description: "Email API for developers"
+    pricing:
+      url: "https://resend.com/pricing"
+      selector: "main"
+    changelog:
+      type: "feed"
+      url: "https://resend.com/blog/rss.xml"
