@@ -15,10 +15,11 @@ __pycache__/
 *.so
 .pytest_cache/
 
-# Databases
-data/*.db
+# Databases (allow production state db for GitHub Actions persistence)
 data/*.sqlite
 data/*.sqlite3
+data/*.db
+!data/intel.db
 
 # macOS Artifacts
 .DS_Store
