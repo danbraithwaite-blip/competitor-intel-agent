@@ -138,6 +138,34 @@ def cmd_run_all(args):
     cmd_report(args)
 
 
+def cmd_daemon(args):
+    """Run continuously on a set interval schedule."""
+    import time
+    from datetime import datetime, timedelta
+
+    interval_hours = getattr(args, "interval_hours", 24) or 24
+    interval_seconds = int(interval_hours * 3600)
+
+    console.print(f"\n[bold cyan]🔄 Running Competitor Intelligence Daemon (Every {interval_hours} hours)...[/bold cyan]")
+    console.print("[dim]Press Ctrl+C to stop the daemon at any time.[/dim]\n")
+
+    while True:
+        try:
+            now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            console.print(f"[bold]▶ Scan cycle triggered at {now_str}[/bold]")
+            cmd_run_all(args)
+
+            next_run = (datetime.now() + timedelta(seconds=interval_seconds)).strftime("%Y-%m-%d %H:%M:%S")
+            console.print(f"[cyan]⏳ Next scan scheduled for: {next_run}. Sleeping...[/cyan]\n")
+            time.sleep(interval_seconds)
+        except KeyboardInterrupt:
+            console.print("\n[yellow]Daemon stopped by user.[/yellow]")
+            break
+        except Exception as e:
+            console.print(f"[red]Unexpected error in daemon cycle: {e}[/red]")
+            time.sleep(60)
+
+
 def cmd_add_competitor(args):
     """Helper to register a new competitor in config/competitors.yaml."""
     console.print("\n[bold cyan]➕ Add New Competitor[/bold cyan]")
@@ -200,6 +228,12 @@ def main():
     # test-slack
     p_test_slack = subparsers.add_parser("test-slack", help="Test Slack webhook connection")
     p_test_slack.set_defaults(func=cmd_test_slack)
+
+    # daemon
+    p_daemon = subparsers.add_parser("daemon", help="Run continuously in background on schedule")
+    p_daemon.add_argument("--interval-hours", type=float, default=24.0, help="Interval between runs in hours (default: 24)")
+    p_daemon.add_argument("--slack", action="store_true", help="Post briefing directly to Slack channel")
+    p_daemon.set_defaults(func=cmd_daemon)
 
     # add-competitor
     p_add = subparsers.add_parser("add-competitor", help="Register a new competitor")
