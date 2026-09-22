@@ -1,6 +1,6 @@
 # Competitor Intelligence Tracking Agent
 
-An automated intelligence agent built to monitor competitor **pricing/packaging changes** and **product releases/changelogs**, analyze strategic intent using Google Gemini, and deliver executive briefings directly to a **Slack channel** and local HTML/Markdown dashboards.
+An automated intelligence agent built to monitor competitor **pricing/packaging changes** and **product releases/changelogs**, analyze strategic intent using **Anthropic Claude** (or Google Gemini), and deliver executive briefings directly to a **Slack channel** and local HTML/Markdown dashboards.
 
 ---
 
@@ -13,7 +13,7 @@ An automated intelligence agent built to monitor competitor **pricing/packaging 
 - **🚀 Product Updates & Changelogs**:
   - Consumes RSS/Atom feeds and HTML changelog pages (e.g. `/changelog`, `/releases`).
   - Automatically deduplicates and extracts release titles, key capabilities, and publication dates.
-- **🧠 Gemini Strategic Intelligence Engine**:
+- **🧠 Claude Strategic Intelligence Engine**:
   - Eliminates noise and categorizes strategic moves.
   - Classifies threat levels (`HIGH`, `MEDIUM`, `LOW`).
   - Evaluates strategic intent (why the competitor made this move).
@@ -43,8 +43,12 @@ cp .env.example .env
 ```
 Edit `.env` with your keys:
 ```env
-# Gemini API Key (https://aistudio.google.com/)
-GEMINI_API_KEY=your_gemini_api_key
+# Anthropic Claude API Key (https://console.anthropic.com/)
+ANTHROPIC_API_KEY=sk-ant-your_claude_api_key_here
+ANTHROPIC_MODEL=claude-3-5-haiku-20241022
+
+# Optional: Google Gemini API Key
+# GEMINI_API_KEY=your_gemini_api_key
 
 # Slack Incoming Webhook (Slack App -> Incoming Webhooks)
 SLACK_WEBHOOK_URL=https://hooks.slack.com/services/T.../B.../X...

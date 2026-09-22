@@ -30,9 +30,10 @@ jobs:
 
       - name: Run Monitoring & Send Slack Briefing
         env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          GEMINI_MODEL: "gemini-2.5-flash"
+          LLM_PROVIDER: "claude"
         run: |
           python main.py run-all --slack
 

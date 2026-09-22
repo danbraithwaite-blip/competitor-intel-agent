@@ -43,8 +43,11 @@ class CompetitorConfig(BaseModel):
 
 
 class Settings(BaseModel):
+    anthropic_api_key: Optional[str] = Field(default_factory=lambda: os.getenv("ANTHROPIC_API_KEY"))
+    anthropic_model: str = Field(default_factory=lambda: os.getenv("ANTHROPIC_MODEL", "claude-3-5-haiku-20241022"))
     gemini_api_key: Optional[str] = Field(default_factory=lambda: os.getenv("GEMINI_API_KEY"))
     gemini_model: str = Field(default_factory=lambda: os.getenv("GEMINI_MODEL", "gemini-2.5-flash"))
+    llm_provider: str = Field(default_factory=lambda: os.getenv("LLM_PROVIDER", "claude"))
     min_diff_lines: int = Field(default_factory=lambda: int(os.getenv("MIN_DIFF_LINES", "2")))
     slack_webhook_url: Optional[str] = Field(default_factory=lambda: os.getenv("SLACK_WEBHOOK_URL"))
     discord_webhook_url: Optional[str] = Field(default_factory=lambda: os.getenv("DISCORD_WEBHOOK_URL"))

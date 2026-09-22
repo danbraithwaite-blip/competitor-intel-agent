@@ -13,6 +13,7 @@ from src.storage.db import Database
 from src.collectors.pricing_collector import PricingCollector
 from src.collectors.changelog_collector import ChangelogCollector
 from src.analyzer.gemini_client import GeminiClient
+from src.analyzer.claude_client import ClaudeClient
 from src.analyzer.engine import IntelligenceEngine
 from src.reporters.executive_briefing import BriefingReporter
 from src.reporters.slack_publisher import SlackPublisher
@@ -64,18 +65,27 @@ def cmd_track(args):
 
 
 def cmd_analyze(args):
-    """Run Gemini LLM intelligence analysis on newly detected events."""
+    """Run LLM intelligence analysis on newly detected events using Claude or Gemini."""
     console.print("\n[bold cyan]🧠 Starting Strategic Intelligence Analysis...[/bold cyan]")
     db = Database(settings.db_path)
-    client = GeminiClient(api_key=settings.gemini_api_key, model=settings.gemini_model)
+
+    # Determine LLM client based on provider or configured keys
+    if settings.llm_provider.lower() == "claude" or settings.anthropic_api_key:
+        client = ClaudeClient(api_key=settings.anthropic_api_key, model=settings.anthropic_model)
+        provider_name = f"Anthropic Claude ({settings.anthropic_model})"
+        key_var = "ANTHROPIC_API_KEY"
+    else:
+        client = GeminiClient(api_key=settings.gemini_api_key, model=settings.gemini_model)
+        provider_name = f"Google Gemini ({settings.gemini_model})"
+        key_var = "GEMINI_API_KEY"
 
     if not client.is_configured:
         console.print(
-            "[yellow]Notice: GEMINI_API_KEY is not set in your environment or .env file.\n"
-            "Using offline heuristic intelligence engine. To enable live Gemini synthesis, set GEMINI_API_KEY.[/yellow]\n"
+            f"[yellow]Notice: {key_var} is not set in your environment or .env file.\n"
+            f"Using offline heuristic intelligence engine. To enable live AI synthesis, set {key_var}.[/yellow]\n"
         )
     else:
-        console.print(f"[green]✓ Connected to Gemini API ({settings.gemini_model})[/green]")
+        console.print(f"[green]✓ Connected to {provider_name}[/green]")
 
     engine = IntelligenceEngine(db=db, client=client)
     analyzed_count = engine.process_unanalyzed_events()

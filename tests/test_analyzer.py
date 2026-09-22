@@ -73,3 +73,24 @@ def test_intelligence_engine_offline_pipeline():
         assert len(analyses) == 2
         assert all(a["summary"] for a in analyses)
         assert all(a["counter_strategy"] for a in analyses)
+
+
+def test_claude_client_offline_and_parsing():
+    from src.analyzer.claude_client import ClaudeClient
+
+    client = ClaudeClient(api_key=None)
+    assert not client.is_configured
+
+    # Test heuristic fallback for pricing
+    res_pricing = client.generate_json(
+        prompt="Analyze pricing diff: - $10 + $20",
+        system_instruction="Analyze pricing change",
+    )
+    assert "summary" in res_pricing
+    assert "counter_strategy" in res_pricing
+
+    # Test JSON extraction with markdown code fences
+    fence_raw = "```json\n{\"category\": \"Price Increase\", \"impact_level\": \"HIGH\"}\n```"
+    parsed = client._extract_json(fence_raw)
+    assert parsed["category"] == "Price Increase"
+    assert parsed["impact_level"] == "HIGH"
