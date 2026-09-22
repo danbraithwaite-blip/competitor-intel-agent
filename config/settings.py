@@ -42,9 +42,29 @@ class CompetitorConfig(BaseModel):
     changelog: Optional[ChangelogConfig] = None
 
 
+class CompanyProfile(BaseModel):
+    name: str = "Veremark"
+    description: str = "Global pre-employment screening, credential verification, and background checking platform."
+    core_offerings: List[str] = Field(default_factory=lambda: [
+        "Identity verification (IDV) and biometric checks",
+        "Global criminal record checks and sanctions screening",
+        "Employment history and education verification",
+        "Automated digital reference checking (Autocheck)",
+        "Continuous workforce monitoring and compliance",
+        "ATS and HRIS integrations (Greenhouse, Workday, Lever, BambooHR, etc.)"
+    ])
+    strategic_focus_areas: List[str] = Field(default_factory=lambda: [
+        "Pricing per check, package bundling, subscription vs pay-as-you-go",
+        "Turnaround times and international SLA guarantees",
+        "New ATS/HRIS integration announcements",
+        "Regulatory compliance changes (GDPR, FCRA, UK DBS)",
+        "AI-driven screening features and candidate experience workflows"
+    ])
+
+
 class Settings(BaseModel):
     anthropic_api_key: Optional[str] = Field(default_factory=lambda: os.getenv("ANTHROPIC_API_KEY"))
-    anthropic_model: str = Field(default_factory=lambda: os.getenv("ANTHROPIC_MODEL", "claude-3-5-haiku-20241022"))
+    anthropic_model: str = Field(default_factory=lambda: os.getenv("ANTHROPIC_MODEL", "claude-haiku-4-5-20251001"))
     gemini_api_key: Optional[str] = Field(default_factory=lambda: os.getenv("GEMINI_API_KEY"))
     gemini_model: str = Field(default_factory=lambda: os.getenv("GEMINI_MODEL", "gemini-2.5-flash"))
     llm_provider: str = Field(default_factory=lambda: os.getenv("LLM_PROVIDER", "claude"))
@@ -57,6 +77,21 @@ class Settings(BaseModel):
 
 
 settings = Settings()
+
+
+def load_company_profile(config_path: Optional[Path] = None) -> CompanyProfile:
+    """Load the target company profile and focus areas from YAML."""
+    path = config_path or settings.config_file
+    if not path.exists():
+        return CompanyProfile()
+
+    with open(path, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+
+    if not data or "company" not in data:
+        return CompanyProfile()
+
+    return CompanyProfile(**data["company"])
 
 
 def load_competitors(config_path: Optional[Path] = None) -> List[CompetitorConfig]:

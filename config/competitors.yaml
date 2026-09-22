@@ -1,36 +1,59 @@
-# Competitors Configuration File
-# Define competitors to monitor, along with their pricing pages and changelogs.
+# ==============================================================================
+# TARGET COMPANY PROFILE
+# This profile instructs the AI (Claude) to analyze competitor moves specifically
+# through the lens of how they impact Veremark's business, sales, and product.
+# ==============================================================================
+company:
+  name: "Veremark"
+  description: "Global pre-employment screening, credential verification, and background checking platform."
+  core_offerings:
+    - "Identity verification (IDV) and biometric checks"
+    - "Global criminal record checks, adverse media, and sanctions screening"
+    - "Employment history, education, and credential verification"
+    - "Automated digital reference checking (Autocheck)"
+    - "Continuous workforce monitoring and compliance"
+    - "ATS and HRIS integrations (Greenhouse, Workday, Lever, Ashby, BambooHR)"
+  strategic_focus_areas:
+    - "Pricing per check, package bundling, subscription vs pay-as-you-go"
+    - "Turnaround times and international SLA guarantees"
+    - "New ATS/HRIS integrations and partner ecosystem updates"
+    - "Regulatory compliance changes (GDPR, FCRA, UK DBS, Right to Work)"
+    - "AI-driven screening features and candidate experience workflows"
 
+# ==============================================================================
+# COMPETITORS TO MONITOR
+# Add, remove, or modify competitors and their target URLs below.
+# ==============================================================================
 competitors:
-  - id: "linear"
-    name: "Linear"
-    website: "https://linear.app"
-    description: "Issue tracking and project management tool"
+  - id: "checkr"
+    name: "Checkr"
+    website: "https://checkr.com"
+    description: "AI-powered background check and screening platform (US & International)"
     pricing:
-      url: "https://linear.app/pricing"
+      url: "https://checkr.com/pricing"
       selector: "main"
     changelog:
       type: "web_page"
-      url: "https://linear.app/changelog"
+      url: "https://checkr.com/product/updates"
 
-  - id: "supabase"
-    name: "Supabase"
-    website: "https://supabase.com"
-    description: "Open source Firebase alternative"
+  - id: "zinc"
+    name: "Zinc Work"
+    website: "https://zincwork.com"
+    description: "Automated candidate background checking platform (UK & Europe)"
     pricing:
-      url: "https://supabase.com/pricing"
+      url: "https://zincwork.com/pricing"
       selector: "main"
     changelog:
       type: "feed"
-      url: "https://supabase.com/rss.xml"
+      url: "https://zincwork.com/blog/rss.xml"
 
-  - id: "resend"
-    name: "Resend"
-    website: "https://resend.com"
-    description: "Email API for developers"
+  - id: "certn"
+    name: "Certn"
+    website: "https://certn.co"
+    description: "Fast global background screening and identity verification"
     pricing:
-      url: "https://resend.com/pricing"
+      url: "https://certn.co/pricing"
       selector: "main"
     changelog:
       type: "feed"
-      url: "https://resend.com/blog/rss.xml"
+      url: "https://certn.co/feed"
