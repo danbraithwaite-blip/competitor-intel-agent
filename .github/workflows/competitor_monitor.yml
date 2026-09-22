@@ -1,9 +1,9 @@
-name: Competitor Intelligence Daily Monitor
+name: Competitor Intelligence Weekly Digest
 
 on:
   schedule:
-    # Runs every weekday at 09:00 UTC (Mon-Fri)
-    - cron: '0 9 * * 1-5'
+    # Runs every Monday at 08:00 UTC (09:00 AM UK time)
+    - cron: '0 8 * * 1'
   workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
 
 permissions:
