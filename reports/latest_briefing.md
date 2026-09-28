@@ -1,5 +1,5 @@
-# Competitive Intelligence Briefing — Sep 22, 2026
-*Generated at: 2026-09-22 15:07:14 | Powered by Gemini Intelligence Engine*
+# Competitive Intelligence Briefing — Sep 28, 2026
+*Generated at: 2026-09-28 08:19:39 | Powered by Gemini Intelligence Engine*
 
 ## Executive Summary
 - **Total Monitored Events:** 10
