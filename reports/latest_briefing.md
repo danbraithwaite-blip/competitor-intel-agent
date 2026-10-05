@@ -1,16 +1,19 @@
-# Competitive Intelligence Briefing — Sep 28, 2026
-*Generated at: 2026-09-28 08:19:39 | Powered by Gemini Intelligence Engine*
+# Competitive Intelligence Briefing — Oct 05, 2026
+*Generated at: 2026-10-05 08:20:03 | Powered by Gemini Intelligence Engine*
 
 ## Executive Summary
-- **Total Monitored Events:** 10
-- **Pricing Movements:** 0
+- **Total Monitored Events:** 11
+- **Pricing Movements:** 1
 - **Product Releases:** 10
 - **High Threat Items:** 0
 
 ---
 ## 💰 Pricing & Packaging Radar
 
-*No pricing changes detected in this cycle.*
+### [CHECKR] Packaging & Limits Shift `[MEDIUM IMPACT]`
+- **Summary:** Checkr restructured its pricing presentation to emphasize tiered feature bundling (Basic/Essential/Complete) with clearer feature inclusion matrices, while maintaining per-report pricing. The shift highlights unlimited county/state criminal searches as tier differentiators, potentially signaling a move toward value-stacking to justify higher price points.
+- **Strategic Intent:** Checkr is attempting to anchor customers to higher tiers by making feature differentiation explicit and visual. The introduction of a free Personal Profiles tier suggests expansion into B2C2B (candidate-initiated verification) to build brand awareness and create downstream B2B upsell. The emphasis on 'unlimited' searches at higher tiers positions Complete as the 'safe choice' for compliance-heavy buyers, justifying premium pricing.
+- **Recommended Counter-Move:** For Veremark sales: (1) Develop battlecard emphasizing Veremark's bundled screening packages (IDV + criminal + employment verification) as superior value vs. Checkr's à la carte add-on model—highlight total cost of ownership for a full hire. (2) Highlight Veremark's integrated credential verification and Autocheck (digital references) as differentiators Checkr lacks in their tier structure. (3) For mid-market: position Veremark's subscription/volume discounts against Checkr's per-report model to show cost predictability. (4) Product: accelerate candidate-facing verification portal (similar to Checkr Profiles) to compete in B2C2B space and create brand touchpoints. (5) Marketing: create comparison content showing 'true cost' of Checkr's unlimited searches (pass-through fees, add-ons) vs. Veremark's all-in pricing transparency.
 
 ---
 ## 🚀 Product Updates & Changelogs
