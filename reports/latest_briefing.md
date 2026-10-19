@@ -1,14 +1,19 @@
-# Competitive Intelligence Briefing — Oct 12, 2026
-*Generated at: 2026-10-12 08:21:40 | Powered by Gemini Intelligence Engine*
+# Competitive Intelligence Briefing — Oct 19, 2026
+*Generated at: 2026-10-19 08:36:57 | Powered by Gemini Intelligence Engine*
 
 ## Executive Summary
-- **Total Monitored Events:** 11
-- **Pricing Movements:** 1
+- **Total Monitored Events:** 12
+- **Pricing Movements:** 2
 - **Product Releases:** 10
 - **High Threat Items:** 0
 
 ---
 ## 💰 Pricing & Packaging Radar
+
+### [CERTN] Promotional / Minor Copy `[LOW IMPACT]`
+- **Summary:** Certn added a limited-time promotional offer (25% off select checks/packages until Sept 30, 2025) for new customers, with no underlying pricing tier or feature changes detected in the diff.
+- **Strategic Intent:** Certn is running a time-bound acquisition campaign to drive new customer sign-ups before Q4 2025, likely responding to competitive pressure or seasonal demand patterns. The 25% discount targets price-sensitive SMBs and mid-market buyers.
+- **Recommended Counter-Move:** Veremark should: (1) Monitor Certn's promotional effectiveness through win/loss analysis and sales pipeline tracking; (2) Prepare a counter-promotional playbook emphasizing Veremark's superior turnaround times, global coverage, and integrated ATS/HRIS ecosystem rather than competing on price alone; (3) Highlight Veremark's transparent, no-pass-through-fee pricing model vs. Certn's disclosed pass-through fees; (4) Brief sales team on talking points around total cost of ownership and integration value to neutralize discount-driven objections; (5) Consider a targeted retention/expansion offer for existing Veremark customers to prevent churn to Certn's promotion.
 
 ### [CHECKR] Packaging & Limits Shift `[MEDIUM IMPACT]`
 - **Summary:** Checkr restructured its pricing presentation to emphasize tiered feature bundling (Basic/Essential/Complete) with clearer feature inclusion matrices, while maintaining per-report pricing. The shift highlights unlimited county/state criminal searches as tier differentiators, potentially signaling a move toward value-stacking to justify higher price points.
